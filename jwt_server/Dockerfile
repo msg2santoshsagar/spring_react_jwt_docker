@@ -1,10 +1,15 @@
+FROM alpine/git
+WORKDIR /app
+RUN git clone https://github.com/msg2santoshsagar/spring_react_jwt_docker.git
+
 FROM maven:3.5-jdk-8-alpine
-#WORKDIR /
+WORKDIR /app
+COPY --from=0 /app/spring_react_jwt_docker/jwt_server /app
 RUN mvn install
-RUN ls
 
 FROM openjdk:8-jre-alpine
-WORKDIR /
-COPY --from=0 /target/jwt_server.jar /
-EXPOSE 8085
+WORKDIR /app
+COPY --from=1 /app/target/jwt_server.jar /app
+EXPOSE 8081
 ENTRYPOINT ["sh", "-c"]
+CMD ["java -jar jwt_server.jar"]
