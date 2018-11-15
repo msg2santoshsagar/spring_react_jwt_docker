@@ -47,3 +47,5 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ## Docker container
 
 Run `docker build . -t jwt_web` to build the docker image 
+
+Run `docker run -ti -p 3000:80 jwt_web` to run the image
