@@ -1,0 +1,44 @@
+.App {
+  text-align: center;
+}
+
+.d-none{
+  display: none;
+}
+
+.loginContainer{
+  border: 1px solid black;
+  width: 400px;
+  margin: auto;
+  margin-top: 50px;
+  padding-bottom: 10px;
+}
+
+.loginContainer input{
+  width: 90%;
+  padding: 10px;
+  margin: 10px;
+}
+
+.loginContainer button{
+  padding:5px;
+  background-color: rgb(134, 206, 134);
+}
+
+.userDetailContainer{
+  border: 1px solid black;
+  width: 400px;
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px;
+  text-align: left;
+}
+
+.header{
+  font-size: 24px;
+  font-weight: bold;
+}
+.userDetail{
+  font-size: 20px;
+  letter-spacing: 1px;
+}
