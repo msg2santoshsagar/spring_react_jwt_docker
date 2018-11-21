@@ -33,7 +33,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		.and()
 		.csrf().disable()
 		.authorizeRequests()
-		.antMatchers("/api/ping").permitAll()
+		.antMatchers("/api/ping","/api/login").permitAll()
 		.anyRequest().authenticated()
 		.and()
 		.formLogin().permitAll()
